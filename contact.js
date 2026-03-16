@@ -35,7 +35,7 @@ function toonFeedback() {
 		}
 
 		div.innerHTML =
-			"<strong>" + item.name + "</strong> " + sterren +
+			"<strong>" + item.name + "</strong> <span class=\"feedback-stars\">" + sterren + "</span>" +
 			"<p>" + item.text + "</p>" +
 			"<small>" + item.date + "</small>";
 
