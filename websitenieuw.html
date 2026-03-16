@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="nl">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>James de Bont</title>
+		<link rel="stylesheet" href="style2.css"/>
+	</head>
+	<body>
+
+		<header>
+			<img src="Logo zonder achtergrond.png" alt="James de Bont logo" class="logo">
+			</div>
+		</header>
+
+		<div class="tabs">
+			<input type="radio" name="tablad" id="tab-home" checked>
+			<label for="tab-home" class="tab-label">Home</label>
+			<input type="radio" name="tablad" id="tab-over">
+			<label for="tab-over" class="tab-label">Over het spel</label>
+			<input type="radio" name="tablad" id="tab-spel">
+			<label for="tab-spel" class="tab-label">Spelen</label>
+			<input type="radio" name="tablad" id="tab-bord">
+			<label for="tab-bord" class="tab-label">Leaderboard</label>
+			<input type="radio" name="tablad" id="tab-contact">
+			<label for="tab-contact" class="tab-label">Contact</label>
+
+			<!-- HOME -->
+			<div class="tab-content" id="content-home">
+				<div class="hero">
+				<div class="tab-content" id="home">
+</div>
+								
+				<div class= "home-text">
+				<h2>James de Bont - de Cyberdetective</h2>
+				<h4>Kraak de code, versla Cas de Hacker en leer informatica!</h4>
+				<p>Word zelf special agent informatica 007!</p>
+				<a class="playbutton" href="downloads/mijn_game.zip">Speel nu</a>
+				</div> 
+				<img src="Full logo James de Bont.png" alt="James de Bont logo groot" class="logo-groot" width="400" height="270">
+				
+					<div class="feature-cards">
+						<div class="feature-card">
+							<span class="feature-icon">🎮</span>
+							<h3>Speel</h3>
+							<p>Spring, ren en ontwijken in dit actie-avontuur</p>
+						</div>
+						<div class="feature-card">
+							<span class="feature-icon">🏆</span>
+							<h3>Competitie</h3>
+							<p>Behaal de hoogste score en sta bovenaan het leaderboard</p>
+						</div>
+						<div class="feature-card">
+							<span class="feature-icon">💬</span>
+							<h3>Feedback</h3>
+							<p>Laat ons weten wat je van het spel vindt</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- OVER HET SPEL -->
+			<div class="tab-content" id="content-over">
+				<h2>Over het spel</h2>
+				<div class="about-grid">
+					<div class="about-card">
+						<h3>Het verhaal</h3>
+						<p>James de Bont is een avonturier die door gevaarlijke levels moet navigeren. Elk level wordt moeilijker en de uitdagingen groter!</p>
+					</div>
+					<div class="about-card">
+						<h3>Hoe speel je?</h3>
+						<p>Gebruik de pijltjestoetsen of WASD om te bewegen. Spring over obstakels en verzamel punten om je score te verhogen.</p>
+					</div>
+					<div class="about-card">
+						<h3>Gemaakt met</h3>
+						<p>Dit spel is ontwikkeld met GameMaker als onderdeel van een informatica schoolproject.</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- SPELEN -->
+			<div class="tab-content" id="content-spel">
+				<div class="play-section">
+					<h2>Speel het spel</h2>
+					<p>Klik op de knop hieronder om James de Bont te spelen!</p>
+					<a class="playbutton" href="game/game.html">
+						<span class="play-icon">&#9654;</span> Start Game
+					</a>
+				</div>
+			</div>
+
+			<!-- LEADERBOARD -->
+			<div class="tab-content" id="content-bord">
+				<h2>Leaderboard</h2>
+
+				<div class="score-section">
+					<div class="score-form-card">
+						<h3>Voer je score in</h3>
+						<div class="score-form">
+							<input type="text" id="naam" placeholder="Naam speler">
+							<input type="number" id="score" placeholder="Score">
+							<button onclick="scoreOpslaan()">Score toevoegen</button>
+						</div>
+					</div>
+
+					<div class="score-table-card">
+						<h3>Beste scores</h3>
+						<table>
+							<thead>
+								<tr>
+									<th>Plaats</th>
+									<th>Naam</th>
+									<th>Score</th>
+									<th>Datum</th>
+								</tr>
+							</thead>
+							<tbody id="scoreTable"></tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+
+			<!-- CONTACT -->
+			<div class="tab-content" id="content-contact">
+				<h2>Contact & Feedback</h2>
+				<div class="contact-layout">
+					<div class="forms">
+
+						<div class="form-card">
+							<h3>Geef feedback</h3>
+							<form id="feedbackForm">
+								<label class="form-label">Naam</label>
+								<input type="text" id="feedbackName" required>
+
+								<label class="form-label">Hoeveel sterren geef je de website?</label>
+								<div class="star-rating">
+									<input type="radio" name="rating" id="star5" value="5">
+									<label for="star5">★</label>
+									<input type="radio" name="rating" id="star4" value="4">
+									<label for="star4">★</label>
+									<input type="radio" name="rating" id="star3" value="3">
+									<label for="star3">★</label>
+									<input type="radio" name="rating" id="star2" value="2">
+									<label for="star2">★</label>
+									<input type="radio" name="rating" id="star1" value="1">
+									<label for="star1">★</label>
+								</div>
+
+								<label class="form-label">Feedback</label>
+								<textarea id="feedbackText" rows="4" required></textarea>
+
+								<button type="submit">Verstuur feedback</button>
+							</form>
+						</div>
+
+						<div class="form-card">
+							<h3>Stel een vraag</h3>
+							<form id="questionForm">
+								<label class="form-label">Naam</label>
+								<input type="text" id="questionName" required>
+
+								<label class="form-label">Email</label>
+								<input type="email" id="questionEmail" required>
+
+								<label class="form-label">Vraag</label>
+								<textarea id="questionText" rows="4" required></textarea>
+
+								<button type="submit">Verstuur vraag</button>
+							</form>
+						</div>
+					</div>
+
+					<div class="feedback-list">
+						<h3>Feedback van spelers</h3>
+						<div id="feedbackContainer">
+							<p>Nog geen feedback geplaatst.</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="contact-info">
+					<h3>Contactgegevens</h3>
+					<p>Email: info@jouwwebsite.nl</p>
+					<p>Instagram: @jouwgame</p>
+				</div>
+			</div>
+
+		</div>
+
+		<script src="score.js"> </script>
+		<script src="contact.js"> </script>
+
+		<footer>
+			<p>Informatica Project - James de Bont</p>
+		</footer>
+	</body>
+</html>
