@@ -38,8 +38,12 @@ header::before{
 }
 
 @keyframes headerGlow{
-	0%, 100%{ transform: translate(0, 0); }
-	50%{ transform: translate(30px, 20px); }
+	0%, 100%{
+		transform: translate(0, 0);
+	}
+	50%{
+		transform: translate(30px, 20px);
+	}
 }
 
 .header-inner{
@@ -47,38 +51,28 @@ header::before{
 	z-index: 1;
 }
 
-.logo-text{
-	font-size: 52px;
-	font-weight: 800;
-	letter-spacing: 4px;
-	color: #fff;
-	text-shadow:
-		0 0 10px rgba(0,255,200,0.8),
-		0 0 30px rgba(0,255,200,0.6),
-		0 0 60px rgba(0,255,200,0.4),
-		0 0 100px rgba(0,255,200,0.2);
-	margin-bottom: 8px;
-	position: relative;
-	display: inline-block;
-	animation: neonPulse 2s ease-in-out infinite;
+.logo{
+	max-width: 400px;
+	width: 90%;
+	display: block;
+	margin: auto;
+	filter: drop-shadow(0 0 12px rgba(0,255,200,0.6));
 }
 
 /* NEON GLOW PULS */
 
 @keyframes neonPulse{
 	0%, 100%{
-		text-shadow:
-			0 0 10px rgba(0,255,200,0.8),
-			0 0 30px rgba(0,255,200,0.6),
-			0 0 60px rgba(0,255,200,0.4),
-			0 0 100px rgba(0,255,200,0.2);
+		text-shadow: 0 0 10px rgba(0,255,200,0.8),
+		0 0 30px rgba(0,255,200,0.6),
+		0 0 60px rgba(0,255,200,0.4),
+		0 0 100px rgba(0,255,200,0.2);
 	}
 	50%{
-		text-shadow:
-			0 0 5px rgba(0,255,200,0.6),
-			0 0 15px rgba(0,255,200,0.4),
-			0 0 30px rgba(0,255,200,0.2),
-			0 0 50px rgba(0,255,200,0.1);
+		text-shadow: 0 0 5px rgba(0,255,200,0.6),
+		0 0 15px rgba(0,255,200,0.4),
+		0 0 30px rgba(0,255,200,0.2),
+		0 0 50px rgba(0,255,200,0.1);
 	}
 }
 
@@ -107,19 +101,49 @@ header::before{
 }
 
 @keyframes glitch1{
-	0%, 90%, 100%{ clip-path: inset(0 0 0 0); transform: translate(0); }
-	92%{ clip-path: inset(20% 0 40% 0); transform: translate(-4px, -2px); }
-	94%{ clip-path: inset(60% 0 10% 0); transform: translate(4px, 2px); }
-	96%{ clip-path: inset(30% 0 50% 0); transform: translate(-3px, 1px); }
-	98%{ clip-path: inset(70% 0 5% 0); transform: translate(2px, -1px); }
+	0%, 90%, 100%{
+		clip-path: inset(0 0 0 0);
+	transform: translate(0);
+	}
+	92%{
+		clip-path: inset(20% 0 40% 0);
+	transform: translate(-4px, -2px);
+	}
+	94%{
+		clip-path: inset(60% 0 10% 0);
+	transform: translate(4px, 2px);
+	}
+	96%{
+		clip-path: inset(30% 0 50% 0);
+	transform: translate(-3px, 1px);
+	}
+	98%{
+		clip-path: inset(70% 0 5% 0);
+	transform: translate(2px, -1px);
+	}
 }
 
 @keyframes glitch2{
-	0%, 90%, 100%{ clip-path: inset(0 0 0 0); transform: translate(0); }
-	91%{ clip-path: inset(50% 0 20% 0); transform: translate(4px, 2px); }
-	93%{ clip-path: inset(10% 0 60% 0); transform: translate(-3px, -1px); }
-	95%{ clip-path: inset(40% 0 30% 0); transform: translate(3px, -2px); }
-	97%{ clip-path: inset(5% 0 70% 0); transform: translate(-2px, 1px); }
+	0%, 90%, 100%{
+		clip-path: inset(0 0 0 0);
+	transform: translate(0);
+	}
+	91%{
+		clip-path: inset(50% 0 20% 0);
+	transform: translate(4px, 2px);
+	}
+	93%{
+		clip-path: inset(10% 0 60% 0);
+	transform: translate(-3px, -1px);
+	}
+	95%{
+		clip-path: inset(40% 0 30% 0);
+	transform: translate(3px, -2px);
+	}
+	97%{
+		clip-path: inset(5% 0 70% 0);
+	transform: translate(-2px, 1px);
+	}
 }
 
 .subtitle{
@@ -188,8 +212,14 @@ header::before{
 }
 
 @keyframes fadeIn{
-	from{ opacity: 0; transform: translateY(8px); }
-	to{ opacity: 1; transform: translateY(0); }
+	from{
+		opacity: 0;
+	transform: translateY(8px);
+	}
+	to{
+		opacity: 1;
+	transform: translateY(0);
+	}
 }
 
 /* TAB WISSELING */
@@ -220,7 +250,18 @@ header::before{
 }
 
 /* ===== HOME - HERO ===== */
+.home-content{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.home-text{
+	max-width: 600px;
+}
 
+.logo-groot{
+	margin-left: 600px;
+}
 .hero{
 	text-align: center;
 }
@@ -405,9 +446,15 @@ tbody tr:hover{
 	background: #f0fdf9;
 }
 
-tbody tr:nth-child(1) td:first-child::after{ content: ' 🥇'; }
-tbody tr:nth-child(2) td:first-child::after{ content: ' 🥈'; }
-tbody tr:nth-child(3) td:first-child::after{ content: ' 🥉'; }
+tbody tr:nth-child(1) td:first-child::after{
+	content: ' 🥇';
+}
+tbody tr:nth-child(2) td:first-child::after{
+	content: ' 🥈';
+}
+tbody tr:nth-child(3) td:first-child::after{
+	content: ' 🥉';
+}
 
 /* ===== CONTACT ===== */
 
