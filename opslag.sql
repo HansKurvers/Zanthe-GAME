@@ -1,0 +1,10 @@
+CREATE DATABASE game_scores;
+
+USE game_scores;
+
+CREATE TABLE highscores (
+id INT AUTO_INCREMENT PRIMARY KEY,
+name VARCHAR(50),
+score INT,
+date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
